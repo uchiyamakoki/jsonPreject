@@ -20,7 +20,8 @@ public class TestJson {
 		//Person person=service.getPerson();
 		//msg=JsonTools.createJsonString("person", person);
 		//System.out.println(msg);
-		msg=JsonTools.createJsonString("persons", service.getListMaps());
+		//msg=JsonTools.createJsonString("persons", service.getListMaps());
+		msg=JsonTools.createJsonString( service.getListMaps());
 		System.out.println(msg);
 	}
 

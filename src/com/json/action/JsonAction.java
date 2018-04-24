@@ -67,7 +67,8 @@ public class JsonAction extends HttpServlet {
 		//String jsonString=JsonTools.createJsonString("person", service.getlistPerson());
 		String jsonString="";
 		String action_flag=request.getParameter("action_flag");
-		if(action_flag.equals("person")){
+		/* json版
+		 * if(action_flag.equals("person")){
 			jsonString=JsonTools.createJsonString("person",service.getPerson());
 		}else if(action_flag.equals("persons")){
 			jsonString=JsonTools.createJsonString("persons",service.getlistPerson() );
@@ -75,6 +76,16 @@ public class JsonAction extends HttpServlet {
 			jsonString=JsonTools.createJsonString("liststring", service.getListString());
 		}else if (action_flag.equals("listmap")) {
 			jsonString=JsonTools.createJsonString("listmap", service.getListMaps());
+		}
+		 */
+		if(action_flag.equals("person")){
+			jsonString=JsonTools.createJsonString(service.getPerson());
+		}else if(action_flag.equals("persons")){
+			jsonString=JsonTools.createJsonString(service.getlistPerson() );
+		}else if(action_flag.equals("liststring")){
+			jsonString=JsonTools.createJsonString(service.getListString());
+		}else if (action_flag.equals("listmap")) {
+			jsonString=JsonTools.createJsonString( service.getListMaps());
 		}
 		out.println(jsonString);
 		
